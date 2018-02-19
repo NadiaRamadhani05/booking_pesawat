@@ -1,25 +1,42 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php 
+ 
+class Admin extends CI_Controller{
 
-class Admin extends CI_Controller {
-
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
-		$this->load->view('Admin');
+		$this->load->view('Admin_v');
 	}
+ 
+	function __construct(){
+		parent::__construct();
+		$this->load->model('Admin_m');
+	
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
+	}
+ 
+	function rute(){
+		$data['rute']=$this->Admin_m->tampil();
+		$this->load->view('Rute_v', $data);
+	}
+
+	function tambahrute(){
+		$this->load->view('Tambahrute_v');
+	}
+
+	function editrute(){
+		$this->load->view('Editrute_v');
+	}
+
+	function user(){
+		$data['user']=$this->Admin_m->tampil_user();
+		$this->load->view('User_v', $data);
+	}
+
+	function tambahuser(){
+		$this->load->view('Tambahuser_v');
+	}
+
+
 }
