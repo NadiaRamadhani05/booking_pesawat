@@ -58,7 +58,7 @@
             <div class="inner">
               <h3>65</h3>
 
-              <p>Data Rute</p>
+              <p>Data Transportation</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
@@ -69,29 +69,6 @@
         <!-- ./col -->
       </div>
       <!-- /.row -->
-      <table id="example2" class="table table-bordered table-hover">
-                <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Username</th>
-                  <th>Password</th>
-                  <th>Fullname</th>
-                  <th>Level</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Admin</td>
-                  <td>Admin</td>
-                  <td>Admin</td>
-                  <td>Admin</td>
-                </tr>
-               
-              </table>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
+      
       <?php require_once  'Footeradmin_v.php' ?>
 

@@ -330,8 +330,30 @@
 
         
         <li>
-          <a href="<?php echo base_url('gudang/Admin/');?>pages/User.php">
+          <a href="<?php echo site_url ('Admin/User');?>">
             <i class="fa fa-th"></i> <span>User</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-green">new</small>
+            </span>
+          </a>
+        </li>
+         <li>
+          <a href="<?php echo site_url ('Admin/Transportation');?>">
+            <i class="fa fa-th"></i> <span>Transportation</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-green">new</small>
+            </span>
+          </a>
+        </li> <li>
+          <a href="<?php echo site_url ('Admin/Rute');?>">
+            <i class="fa fa-th"></i> <span>Rute</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-green">new</small>
+            </span>
+          </a>
+        </li> <li>
+          <a href="<?php echo site_url ('Admin/Customer');?>">
+          <i class="fa fa-th"></i> <span>Customer</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
             </span>
